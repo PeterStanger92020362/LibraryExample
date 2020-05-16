@@ -16,6 +16,25 @@ public class Book {
     private String author;
     private String publish_year;
     
+    public Book (String ISBN, String book_title, String author, String publish_year){
+        this.ISBN = ISBN;
+        this.book_title = book_title;
+        this.author = author;
+        this.publish_year = publish_year;
+    }
     
+    public Book (String book_title, String author, String publish_year){
+        this.ISBN = "1234567893";
+        this.book_title = book_title;
+        this.author = author;
+        this.publish_year = publish_year;
+    }
+    
+    
+    @Override
+    public String toString(){
+        // return "Book Information:\nISBN: " + ISBN + "\nTitle: " + book_title + "\nAuthor: " + author + "\nYear Published: " + publish_year;
+        return "Book Information:\n" + book_title + " by " + author;
+    }
     
 }
